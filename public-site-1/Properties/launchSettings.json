@@ -1,0 +1,16 @@
+﻿{
+  "$schema": "https://json.schemastore.org/launchsettings.json",
+  "profiles": {
+    "public_site_1": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "applicationUrl": "https://localhost:7162;http://localhost:5193",
+        "environmentVariables": {
+            "ASPNETCORE_ENVIRONMENT": "Development",
+            "db_conn_string": "Server=tcp:sql-protected.database.windows.net,1433;Initial Catalog=sql-protected-db;Persist Security Info=False;User ID=dbadmin;Password=admin12345678!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+        }
+    }
+  }
+}
