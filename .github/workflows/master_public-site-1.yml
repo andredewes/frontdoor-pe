@@ -19,6 +19,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+      
+      - name: 'Login via Azure CLI'
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
 
       - name: Set up .NET Core
         uses: actions/setup-dotnet@v1
@@ -57,5 +62,4 @@ jobs:
         with:
           app-name: 'public-site-1'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_2925F6D26C5D4D3E87E7287DD1F26E23 }}
           package: .
