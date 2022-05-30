@@ -3,15 +3,21 @@
 
 name: Build and deploy ASP.Net Core app to Azure Web App - public-site-1
 
+defaults:
+  run:
+    working-directory: public-site-1
+
 on:
   push:
     branches:
       - master
+    paths:
+      - 'public-site-1/**'
   workflow_dispatch:
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: self-hosted
 
     steps:
       - uses: actions/checkout@v2
@@ -35,7 +41,7 @@ jobs:
           path: ${{env.DOTNET_ROOT}}/myapp
 
   deploy:
-    runs-on: windows-latest
+    runs-on: self-hosted
     needs: build
     environment:
       name: 'Production'
