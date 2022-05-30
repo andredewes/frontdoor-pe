@@ -52,7 +52,7 @@ app.MapGet("/db", () =>
 
 app.MapGet("/", () =>
 {
-    return "This is public site 2";
+    return "This is public site 2!";
 });
 
 app.Run();
