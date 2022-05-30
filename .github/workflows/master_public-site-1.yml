@@ -39,7 +39,7 @@ jobs:
           path: ${{env.DOTNET_ROOT}}/myapp
 
   deploy:
-    runs-on: windows-latest
+    runs-on: self-hosted
     needs: build
     environment:
       name: 'Production'
