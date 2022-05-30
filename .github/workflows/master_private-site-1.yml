@@ -5,7 +5,7 @@ name: Build and deploy ASP.Net Core app to Azure Web App - private-site-1
 
 defaults:
   run:
-    working-directory: public-site-1
+    working-directory: private-site-1
 
 on:
   push:
