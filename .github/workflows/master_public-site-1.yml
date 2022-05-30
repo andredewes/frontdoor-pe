@@ -21,7 +21,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      
+
       - name: Set up .NET Core
         uses: actions/setup-dotnet@v1
         with:
@@ -52,12 +52,12 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: .net-app
-          
+
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
           app-name: 'public-site-1'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_2925F6D26C5D4D3E87E7287DD1F26E23 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_D8008CB28E4E4EF3AF719B6B67502956 }}
           package: .

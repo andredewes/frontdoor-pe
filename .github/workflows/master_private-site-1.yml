@@ -6,7 +6,6 @@ name: Build and deploy ASP.Net Core app to Azure Web App - private-site-1
 defaults:
   run:
     working-directory: private-site-1
-
 on:
   push:
     branches:
@@ -59,5 +58,5 @@ jobs:
         with:
           app-name: 'private-site-1'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_DB29CC5F36854649A825E6CEE619CDF8 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_D487301201FD46E1B6ABB358022C1782 }}
           package: .
