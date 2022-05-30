@@ -11,6 +11,8 @@ on:
   push:
     branches:
       - master
+    paths:
+      - 'private-site-1/**'
   workflow_dispatch:
 
 jobs:
