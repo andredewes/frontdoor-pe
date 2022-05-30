@@ -11,6 +11,8 @@ on:
   push:
     branches:
       - master
+    paths:
+      - 'public-site-2/**'
   workflow_dispatch:
 
 jobs:
