@@ -58,7 +58,7 @@ app.MapGet("/", () =>
 app.MapGet("/download", () =>
 {
     Random rnd = new Random();
-    byte[] b = new byte[100000 * 1024];
+    byte[] b = new byte[500000 * 1024];
     rnd.NextBytes(b);
 
     return Results.Bytes(b, "application/octet-stream");
